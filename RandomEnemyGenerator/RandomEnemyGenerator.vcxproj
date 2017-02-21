@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{55B8A0C5-6F27-4106-9531-ECB1201D8295}</ProjectGuid>
+    <ProjectGuid>{FBFEF9B1-241C-411F-8E6B-CF3643465735}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>EnemyGenerator</RootNamespace>
+    <RootNamespace>RandomEnemyGenerator</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -149,7 +149,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="EnemyGenerator.cpp" />
+    <ClCompile Include="RandomEnemyGenerator.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
