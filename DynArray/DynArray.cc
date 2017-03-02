@@ -41,6 +41,7 @@ DynArray& DynArray::operator= (const DynArray &x) {
 }
 
 int* begin(void) /*const*/ {
+	int *begin;
 	return ;
 }
 
