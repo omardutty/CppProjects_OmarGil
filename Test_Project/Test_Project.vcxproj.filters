@@ -38,5 +38,8 @@
     <ClCompile Include="apuntes.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="DinArrays.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
