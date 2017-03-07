@@ -54,6 +54,6 @@ void push(const int &val) {
 	
 }
 
-/*friend*/ bool operator== (const DynArray& lhs, const DynArray& rhs) {
+bool operator== (const DynArray& lhs, const DynArray& rhs) {
 	return lhs.m_capacity == rhs.m_capacity && lhs.m_size == rhs.m_size;
 }
