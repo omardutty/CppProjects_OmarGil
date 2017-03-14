@@ -151,6 +151,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="apuntes.cpp" />
+    <ClCompile Include="Arrays_bidimensionales.cpp" />
     <ClCompile Include="Circle.cpp" />
     <ClCompile Include="DinArrays.cpp" />
     <ClCompile Include="Interfaz vs Implementcion.cpp" />
