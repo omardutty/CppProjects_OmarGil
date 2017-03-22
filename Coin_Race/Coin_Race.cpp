@@ -38,7 +38,7 @@ public:
 	}
 
 	Map(int diff) { 
-		col= rand()5 * diff;
+		col= rand()*5 * diff;
 		row; 
 		mapGenerator; 
 		fillField; 
