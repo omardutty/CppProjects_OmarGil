@@ -10,39 +10,41 @@ class CoinManager;
 class Map {
 public:
 	char **md;
-	int row = 5 * diff;
-	int col = 5 * diff * 2;
+	int row;
+	int col;
 
 	void mapGenerator(char **m_data, int rows, int columns) {
-		md = new char*[row];
-		for (int i = 0; i < row; i++) {
-			for (int j = 0; j < row; i++) {
-				md[i] = new char[col];
-				md[i][j] = '.';
+		m_data = new char*[rows];
+		for (int i = 0; i < rows; i++) {
+			m_data[i] = new char[columns];
+			for (int j = 0; j < columns; j++) {
+				m_data[i][j] = '.';
 			}
 		}
 	}
 
-	void fillField() {
-
+	void printField(char **m_data) {
+		char print;
 		for (int i = 0; i < row; i++) {
 			for (int j = 0; j < col; j++) {
-				std::cout << md[i][j];
+				print = m_data[i][j];
+				std::cout << print;
 			}
 			std::cout << '\n';
 		}
 	}
-	
+
 	void changeSymbol(int row, int col, char sym) {
 		md[row][col] = sym;
 	}
 
-	Map(int diff) { 
-		col= rand()*5 * diff;
-		row; 
-		mapGenerator; 
-		fillField; 
+	Map(int diff) {
+		row = ((rand() % (10 * diff - 5 * diff)) + 5 * diff);
+		col = ((rand() % (10 * diff - 5 * diff)) + 5 * diff);
+		mapGenerator(md, row, col);
+		printField(md);
 	}
+private:
 
 };
 
@@ -94,16 +96,31 @@ public:
 	}
 
 	Map &mapa;
-	CoinManager(Map &map) : {
+	CoinManager::CoinManager(Map &map) : mapa(map) {
 		mapa.changeSymbol = map.changeSymbol;
-	}
+	};
 
-	void coinPlacer() {
-		for(int i=0;i<rows;)
-	}
+	void coinGenerator(int rows, int columns) {
 
+		int monedaspuestas = 0;
+		bool hascoin;
+		int posX;
+		int posY;
+
+		int minimo = (rows*columns)*0.03;
+		int max = (rows*columns)*0.13;
+		numberofCoins = (rand() % (max - minimo)) + minimo;
+
+		do
+		{
+			posX = ;
+			posY = ;
+
+		} while (monedaspuestas < numberofCoins);
+	}
 };
 
 void main() {
+	srand(static_cast<unsigned>(time(nullptr)));
 	int diff;
 }
