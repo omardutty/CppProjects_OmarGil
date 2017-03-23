@@ -7,30 +7,36 @@ class Player;
 class CoinManager;
 
 
+#include <iostream>
+#include <string>
+#include <ctime>
+#include <conio.h>
+#include<time.h>
+
 class Map {
 public:
 	char **md;
 	int row;
 	int col;
 
-	void mapGenerator(char **m_data, int rows, int columns) {
-		m_data = new char*[rows];
-		for (int i = 0; i < rows; i++) {
-			m_data[i] = new char[columns];
-			for (int j = 0; j < columns; j++) {
-				m_data[i][j] = '.';
+	void mapGenerator() {
+		md = new char*[row];
+		for (int i = 0; i < row; i++) {
+			md[i] = new char[col];
+			for (int j = 0; j < col; j++) {
+				md[i][j] = '.';
 			}
 		}
 	}
 
-	void printField(char **m_data) {
+	void printField() {
 		char print;
 		for (int i = 0; i < row; i++) {
 			for (int j = 0; j < col; j++) {
-				print = m_data[i][j];
+				print = md[i][j];
 				std::cout << print;
 			}
-			std::cout << '\n';
+			std::cout << std::endl;
 		}
 	}
 
@@ -41,8 +47,8 @@ public:
 	Map(int diff) {
 		row = ((rand() % (10 * diff - 5 * diff)) + 5 * diff);
 		col = ((rand() % (10 * diff - 5 * diff)) + 5 * diff);
-		mapGenerator(md, row, col);
-		printField(md);
+		mapGenerator();
+		printField();
 	}
 private:
 
