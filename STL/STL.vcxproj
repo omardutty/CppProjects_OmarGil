@@ -112,6 +112,7 @@
   <ItemGroup>
     <ClCompile Include="map.cpp" />
     <ClCompile Include="STL.cpp" />
+    <ClCompile Include="unordered_map.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
