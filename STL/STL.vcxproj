@@ -110,9 +110,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="deque.cpp" />
     <ClCompile Include="InputOutput.cpp" />
     <ClCompile Include="map.cpp" />
     <ClCompile Include="MasEstructuras.cpp" />
+    <ClCompile Include="queue.cpp" />
     <ClCompile Include="STL.cpp" />
     <ClCompile Include="unordered_map.cpp" />
   </ItemGroup>
